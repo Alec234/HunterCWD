@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'huntingWithCDC'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_979C38B3D7774F7496719CB0F55A948F }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3F0F1D4F2A5749DBB392707D5AD623A3 }}
           package: .
