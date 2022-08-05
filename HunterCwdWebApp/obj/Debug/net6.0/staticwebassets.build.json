@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8huwynA+8MQgWbVCmyWylwWie45pxOUY/cHQvYnjqUU=",
+  "Hash": "P4UKbqQ42gamxGOa9iVX3fGZjlUvPglSrs2g1/MtoW4=",
   "Source": "HunterCwdWebApp",
   "BasePath": "_content/HunterCwdWebApp",
   "Mode": "Default",
@@ -865,6 +865,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
+    },
+    {
+      "Identity": "C:\\Users\\symmo\\OneDrive\\Desktop\\repo\\HunterCWD\\HunterCwdWebApp\\wwwroot\\lib\\Images\\Overview.png",
+      "SourceId": "HunterCwdWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\symmo\\OneDrive\\Desktop\\repo\\HunterCWD\\HunterCwdWebApp\\wwwroot\\",
+      "BasePath": "_content/HunterCwdWebApp",
+      "RelativePath": "lib/Images/Overview.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\Images\\Overview.png"
     },
     {
       "Identity": "C:\\Users\\symmo\\OneDrive\\Desktop\\repo\\HunterCWD\\HunterCwdWebApp\\wwwroot\\lib\\jquery\\dist\\jquery.js",

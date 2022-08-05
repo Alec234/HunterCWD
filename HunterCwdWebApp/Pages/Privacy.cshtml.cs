@@ -12,8 +12,22 @@ namespace HunterCwdWebApp.Pages
             _logger = logger;
         }
 
-        public void OnGet()
+        public string fName { get; set; }
+        public string lName { get; set; }
+        public string message { get; set; }
+        public Dictionary<string, string> data = new();
+
+
+        public void OnGet(Dictionary<string, string> data)
         {
+            this.data = data;
+        }
+
+        public void OnPost(string fName, string lName, string message)
+        {
+            this.data["fName"] = fName;
+            this.data["lName"] = lName;
+            this.data["message"] = message;
         }
     }
 }

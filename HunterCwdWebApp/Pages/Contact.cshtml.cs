@@ -17,5 +17,10 @@ namespace HunterCwdWebApp.Pages
         {
            //do something
         }
+
+        public void OnPost()
+        {
+            //do something
+        }
     }
 }

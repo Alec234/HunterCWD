@@ -1,8 +1,84 @@
 ﻿@page
 @model PrivacyModel
 @{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Alec Rules";
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<!--Begin input form, values will be posted in table underneath-->
+
+       <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" method="POST">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <label for="fName" class="">Your first name</label>
+                            <input type="text" asp-for="fName" class="form-control">
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <label for="lName" class="">Your last name</label>
+                            <input type="text" asp-for="lName" class="form-control">                          
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <label for="message" class="">Message</label>
+                            <input type="text" asp-for="message" class="form-control">                          
+                        </div>
+                    </div>
+                </div>
+
+            <div class="text-center text-md-left">
+                <a class="btn btn-primary" >Submit</a>
+            </div>
+                </form>
+
+
+
+
+
+
+
+<!--Begin table-->
+<table class="table" method="get">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Message</th>
+    </tr>
+  </thead>
+  <tbody>
+            @{
+                if(Model.data.ContainsKey("fName")){
+                   
+                    for(int i = 0; i<Model.data.Count(); i++)
+                    {
+                        <tr>
+                            <th scope="row">@i+1</th>
+                            <td>@Model.data["fName"]</td>
+                            <td>@Model.data["lName"]</td>
+                            <td>@Model.data["message"]</td>
+                        </tr>
+                    }   
+                }
+            }
+  </tbody>
+</table>
