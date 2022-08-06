@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\symmo\\OneDrive\\Desktop\\repo\\HunterCWD\\HunterCwdWebApp\\HunterCwdWebApp.csproj": {}
+    "C:\\Users\\Admin\\Source\\Repos\\HunterCWD2\\HunterCwdWebApp\\HunterCwdWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\symmo\\OneDrive\\Desktop\\repo\\HunterCWD\\HunterCwdWebApp\\HunterCwdWebApp.csproj": {
+    "C:\\Users\\Admin\\Source\\Repos\\HunterCWD2\\HunterCwdWebApp\\HunterCwdWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\symmo\\OneDrive\\Desktop\\repo\\HunterCWD\\HunterCwdWebApp\\HunterCwdWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\HunterCWD2\\HunterCwdWebApp\\HunterCwdWebApp.csproj",
         "projectName": "HunterCwdWebApp",
-        "projectPath": "C:\\Users\\symmo\\OneDrive\\Desktop\\repo\\HunterCWD\\HunterCwdWebApp\\HunterCwdWebApp.csproj",
-        "packagesPath": "C:\\Users\\symmo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\symmo\\OneDrive\\Desktop\\repo\\HunterCWD\\HunterCwdWebApp\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Source\\Repos\\HunterCWD2\\HunterCwdWebApp\\HunterCwdWebApp.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Source\\Repos\\HunterCWD2\\HunterCwdWebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\symmo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,7 +40,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.7, )"
             }
@@ -63,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
