@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mwIojJmAlDYUp9W3X5ofV6efdCkR637QyoH/NgbpGwHWbbtX20RjyJZer95FKQzI7q9dp24QrDxg00JJTya7ug==",
+  "dgSpecHash": "0rqNSBCJN6tKBKT02vnDvm5hb6GOoH1npBVY3HGVrJYMUUDQFmFg2MN6jq/sWHCSZQCVJp/99mSVs//q9t8E1Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\symmo\\Source\\Repos\\Alec234\\HunterCWD\\HunterCwdWebApp\\HunterCwdWebApp.csproj",
+  "projectFilePath": "C:\\Users\\symmo\\Source\\Repos\\HunterCWD\\HunterCwdWebApp\\HunterCwdWebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\symmo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\symmo\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

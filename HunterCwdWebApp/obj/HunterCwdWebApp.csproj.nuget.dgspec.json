@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\symmo\\Source\\Repos\\Alec234\\HunterCWD\\HunterCwdWebApp\\HunterCwdWebApp.csproj": {}
+    "C:\\Users\\symmo\\Source\\Repos\\HunterCWD\\HunterCwdWebApp\\HunterCwdWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\symmo\\Source\\Repos\\Alec234\\HunterCWD\\HunterCwdWebApp\\HunterCwdWebApp.csproj": {
+    "C:\\Users\\symmo\\Source\\Repos\\HunterCWD\\HunterCwdWebApp\\HunterCwdWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\symmo\\Source\\Repos\\Alec234\\HunterCWD\\HunterCwdWebApp\\HunterCwdWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\symmo\\Source\\Repos\\HunterCWD\\HunterCwdWebApp\\HunterCwdWebApp.csproj",
         "projectName": "HunterCwdWebApp",
-        "projectPath": "C:\\Users\\symmo\\Source\\Repos\\Alec234\\HunterCWD\\HunterCwdWebApp\\HunterCwdWebApp.csproj",
+        "projectPath": "C:\\Users\\symmo\\Source\\Repos\\HunterCWD\\HunterCwdWebApp\\HunterCwdWebApp.csproj",
         "packagesPath": "C:\\Users\\symmo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\symmo\\Source\\Repos\\Alec234\\HunterCWD\\HunterCwdWebApp\\obj\\",
+        "outputPath": "C:\\Users\\symmo\\Source\\Repos\\HunterCWD\\HunterCwdWebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\symmo\\AppData\\Roaming\\NuGet\\NuGet.Config",

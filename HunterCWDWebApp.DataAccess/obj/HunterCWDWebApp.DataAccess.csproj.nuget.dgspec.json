@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\symmo\\Source\\Repos\\Alec234\\HunterCWD\\HunterCWDWebApp.DataAccess\\HunterCWDWebApp.DataAccess.csproj": {}
+    "C:\\Users\\symmo\\Source\\Repos\\HunterCWD\\HunterCWDWebApp.DataAccess\\HunterCWDWebApp.DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\symmo\\Source\\Repos\\Alec234\\HunterCWD\\HunterCWDWebApp.DataAccess\\HunterCWDWebApp.DataAccess.csproj": {
+    "C:\\Users\\symmo\\Source\\Repos\\HunterCWD\\HunterCWDWebApp.DataAccess\\HunterCWDWebApp.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\symmo\\Source\\Repos\\Alec234\\HunterCWD\\HunterCWDWebApp.DataAccess\\HunterCWDWebApp.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\symmo\\Source\\Repos\\HunterCWD\\HunterCWDWebApp.DataAccess\\HunterCWDWebApp.DataAccess.csproj",
         "projectName": "HunterCWDWebApp.DataAccess",
-        "projectPath": "C:\\Users\\symmo\\Source\\Repos\\Alec234\\HunterCWD\\HunterCWDWebApp.DataAccess\\HunterCWDWebApp.DataAccess.csproj",
+        "projectPath": "C:\\Users\\symmo\\Source\\Repos\\HunterCWD\\HunterCWDWebApp.DataAccess\\HunterCWDWebApp.DataAccess.csproj",
         "packagesPath": "C:\\Users\\symmo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\symmo\\Source\\Repos\\Alec234\\HunterCWD\\HunterCWDWebApp.DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\symmo\\Source\\Repos\\HunterCWD\\HunterCWDWebApp.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\symmo\\AppData\\Roaming\\NuGet\\NuGet.Config",

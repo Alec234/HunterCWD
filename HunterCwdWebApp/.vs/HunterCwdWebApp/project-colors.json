@@ -5,7 +5,12 @@
       "ProjectGuid": "606f9be6-d3b9-4e7f-a287-9d830f942625",
       "DisplayName": "HunterCwdWebApp",
       "ColorIndex": 0
+    },
+    "0eb9149d-2aea-4ec0-a967-52ab6bbd657d": {
+      "ProjectGuid": "0eb9149d-2aea-4ec0-a967-52ab6bbd657d",
+      "DisplayName": "HunterCWDWebApp.DataAccess",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }
