@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HunterCwdWebApp", "HunterCwdWebApp.csproj", "{606F9BE6-D3B9-4E7F-A287-9D830F942625}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HunterCWDWebApp.DataAccess", "..\HunterCWDWebApp.DataAccess\HunterCWDWebApp.DataAccess.csproj", "{0EB9149D-2AEA-4EC0-A967-52AB6BBD657D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HunterCWDWebApp.DataAccess", "..\HunterCWDWebApp.DataAccess\HunterCWDWebApp.DataAccess.csproj", "{0EB9149D-2AEA-4EC0-A967-52AB6BBD657D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
