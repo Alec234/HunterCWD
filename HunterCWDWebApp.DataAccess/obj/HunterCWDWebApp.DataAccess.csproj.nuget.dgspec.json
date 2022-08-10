@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\symmo\\Source\\Repos\\HunterCWD\\HunterCWDWebApp.DataAccess\\HunterCWDWebApp.DataAccess.csproj": {}
+    "C:\\Users\\Admin\\Source\\Repos\\HunterCWD3\\HunterCWDWebApp.DataAccess\\HunterCWDWebApp.DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\symmo\\Source\\Repos\\HunterCWD\\HunterCWDWebApp.DataAccess\\HunterCWDWebApp.DataAccess.csproj": {
+    "C:\\Users\\Admin\\Source\\Repos\\HunterCWD3\\HunterCWDWebApp.DataAccess\\HunterCWDWebApp.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\symmo\\Source\\Repos\\HunterCWD\\HunterCWDWebApp.DataAccess\\HunterCWDWebApp.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\HunterCWD3\\HunterCWDWebApp.DataAccess\\HunterCWDWebApp.DataAccess.csproj",
         "projectName": "HunterCWDWebApp.DataAccess",
-        "projectPath": "C:\\Users\\symmo\\Source\\Repos\\HunterCWD\\HunterCWDWebApp.DataAccess\\HunterCWDWebApp.DataAccess.csproj",
-        "packagesPath": "C:\\Users\\symmo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\symmo\\Source\\Repos\\HunterCWD\\HunterCWDWebApp.DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Source\\Repos\\HunterCWD3\\HunterCWDWebApp.DataAccess\\HunterCWDWebApp.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Source\\Repos\\HunterCWD3\\HunterCWDWebApp.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\symmo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -76,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

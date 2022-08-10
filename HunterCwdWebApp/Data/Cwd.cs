@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace HunterCwdWebApp
+namespace HunterCwdWebApp.Data
 {
     public partial class Cwd
     {
