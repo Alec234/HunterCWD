@@ -5,17 +5,46 @@
 }
 
 <div>
-    <form method="post">
-        <h1>Welcome to Hunting with CWD</h1>
-        <p>Our website is designed to inform hunters about a particular disease currently infesting our deer population.
-            At Hunting with CWD, we believe knowledge is power. Thus we have created this resource just for you!</p>
-        <h1>@Model.peachmanString</h1>
-        <input type="text" name="txtState" value="" />
-        <input type="submit"  asp-page-handler="Submit" value="Add Record"/><br /><br />
-        <input type="submit"  asp-page-handler="Test" value="Press Me Too"/>
-    </form>
+    <div>
+        <form method="post">
+            <h1>Welcome to Hunting with CWD</h1>
+            <p>Our website is designed to inform hunters about a particular disease currently infesting our deer population.
+                At Hunting with CWD, we believe knowledge is power. Thus we have created this resource just for you!</p>
+            <input type="text" name="txtState" value="" />
+            <input type="submit"  asp-page-handler="Submit" value="Search by State"/><br /><br />
+        </form>
+    </div>
   
+    <div>
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">State</th>
+      <th scope="col">County</th>
+      <th scope="col">Year</th>
+      <th scope="col">PositiveTestCount</th>
+      <th scope="col">TotalTestCount</th>
+    </tr>
+  </thead>
+  <tbody>
+                @{
+                    foreach(var s in @Model.display)
+                    {
+                        <!-- why do I need to use the at symbol here? I would think the at symbol before model is sufficient
+                        and it's wrapped in a code block.-->
+                        <tr>
+                          <td>@s.State</td>
+                          <td>@s.County</td>
+                          <td>@s.Year</td>
+                          <td>@s.PositiveTestCount</td>
+                          <td>@s.TotalTestCount</td>
+                        </tr>   
+                    }
+      }
 
+  </tbody>
+</table>
+    </div>
 
 
 </div>

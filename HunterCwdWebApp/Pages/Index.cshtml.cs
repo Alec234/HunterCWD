@@ -7,8 +7,9 @@ namespace HunterCwdWebApp.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        public string peachmanString;
-
+        private readonly HuntersDBContext _dbContext = new HuntersDBContext();
+        public Data.Cwdstat c = new Data.Cwdstat();
+        public List<Data.Cwdstat> display = new List<Data.Cwdstat>();
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
@@ -16,40 +17,25 @@ namespace HunterCwdWebApp.Pages
 
         public void OnGet()
         {
-            this.peachmanString = "Alec sucks...";
-
-            
-
+             display = _dbContext.Cwdstats.ToList();
         }
 
         public void OnPostSubmit()
         {
-            this.peachmanString = "Alec sucks... a big one";
-            string cwdState = Request.Form["txtState"];            
+            string cwdState = Request.Form["txtState"];
 
-            //try
-            //{
-            //    Data.Cwdstat c = new Data.Cwdstat();
-            //    c.State = "Wisconsin";
-            //    c.County = "Adams";
-            //    c.PositiveTestCount = 3;
-            //    c.TotalTestCount = 90;
-            //    c.Year = 2002;
+            try
+            {
 
-            //    HuntersDBContext hContext = new HuntersDBContext();
-
-            //    hContext.Add(c);
-            //    hContext.SaveChanges();            
-            //}
-            //catch (Exception e)
-            //{
-            //    Console.WriteLine(e.Message);
-            //}
+                display = (from s in _dbContext.Cwdstats
+                           where s.State == cwdState
+                           select s).ToList();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
 
-        public void OnPostTest()
-        {
-            this.peachmanString = "Alec sucks... a long one";
-        }
     }
 }
