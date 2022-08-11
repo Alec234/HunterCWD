@@ -18,29 +18,33 @@ namespace HunterCwdWebApp.Pages
         {
             this.peachmanString = "Alec sucks...";
 
-            try
-            {
-                Data.Cwdstat c = new Data.Cwdstat();
-                c.State = "Illinois";
-                c.County = "Kane";
-                c.PositiveTestCount = 2;
-                c.TotalTestCount = 80;
-                c.Year = 2002;
-
-                HuntersDBContext hContext = new HuntersDBContext();
-
-                hContext.Add(c);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            
 
         }
 
         public void OnPostSubmit()
         {
             this.peachmanString = "Alec sucks... a big one";
+            string cwdState = Request.Form["txtState"];            
+
+            //try
+            //{
+            //    Data.Cwdstat c = new Data.Cwdstat();
+            //    c.State = "Wisconsin";
+            //    c.County = "Adams";
+            //    c.PositiveTestCount = 3;
+            //    c.TotalTestCount = 90;
+            //    c.Year = 2002;
+
+            //    HuntersDBContext hContext = new HuntersDBContext();
+
+            //    hContext.Add(c);
+            //    hContext.SaveChanges();            
+            //}
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine(e.Message);
+            //}
         }
 
         public void OnPostTest()

@@ -17,7 +17,8 @@ namespace HunterCwdWebApp
         {
         }
 
-        public virtual DbSet<Cwd> Cwds { get; set; } = null!;
+        
+        public virtual DbSet<Cwdstat> Cwdstats { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -30,12 +31,19 @@ namespace HunterCwdWebApp
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Cwd>(entity =>
-            {
-                entity.HasNoKey();
+        {            
 
-                entity.ToTable("CWD");
+            modelBuilder.Entity<Cwdstat>(entity =>
+            {
+                entity.HasKey(e => new { e.State, e.County })
+                    .HasName("PK__CWDStats__78221220DC84CF30");
+
+                entity.ToTable("CWDStats");
+
+                entity.Property(e => e.State)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("state");
 
                 entity.Property(e => e.County)
                     .HasMaxLength(20)
@@ -43,11 +51,6 @@ namespace HunterCwdWebApp
                     .HasColumnName("county");
 
                 entity.Property(e => e.PositiveTestCount).HasColumnName("positiveTestCount");
-
-                entity.Property(e => e.State)
-                    .HasMaxLength(20)
-                    .IsUnicode(false)
-                    .HasColumnName("state");
 
                 entity.Property(e => e.TotalTestCount).HasColumnName("totalTestCount");
 
