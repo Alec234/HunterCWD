@@ -1,0 +1,13 @@
+
+create table CWDStats (
+    state varchar(20) NOT NULL,
+    county varchar(20) NOT NULL,
+    year int NOT NULL,
+    positiveTestCount int,
+    totalTestCount int,
+    PRIMARY KEY (state,county))
+
+
+Scaffold-DbContext "Server=tcp:hunter1.database.windows.net,1433;Initial Catalog=HuntersDB;Persist Security Info=False;User ID=Alec;Password=Azure123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" -OutputDir Data -Tables CWDStats -Context HuntersDBContext
+
+provider is Microsoft.EntityFrameworkCore.SqlServer
