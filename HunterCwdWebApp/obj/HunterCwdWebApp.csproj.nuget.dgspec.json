@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Source\\Repos\\HunterCWD3\\HunterCwdWebApp\\HunterCwdWebApp.csproj": {}
+    "C:\\Users\\symmo\\source\\repos\\HunterCWD\\HunterCWD\\HunterCwdWebApp\\HunterCwdWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Source\\Repos\\HunterCWD3\\HunterCwdWebApp\\HunterCwdWebApp.csproj": {
+    "C:\\Users\\symmo\\source\\repos\\HunterCWD\\HunterCWD\\HunterCwdWebApp\\HunterCwdWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\HunterCWD3\\HunterCwdWebApp\\HunterCwdWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\symmo\\source\\repos\\HunterCWD\\HunterCWD\\HunterCwdWebApp\\HunterCwdWebApp.csproj",
         "projectName": "HunterCwdWebApp",
-        "projectPath": "C:\\Users\\Admin\\Source\\Repos\\HunterCWD3\\HunterCwdWebApp\\HunterCwdWebApp.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Source\\Repos\\HunterCWD3\\HunterCwdWebApp\\obj\\",
+        "projectPath": "C:\\Users\\symmo\\source\\repos\\HunterCWD\\HunterCWD\\HunterCwdWebApp\\HunterCwdWebApp.csproj",
+        "packagesPath": "C:\\Users\\symmo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\symmo\\source\\repos\\HunterCWD\\HunterCWD\\HunterCwdWebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\symmo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -79,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
