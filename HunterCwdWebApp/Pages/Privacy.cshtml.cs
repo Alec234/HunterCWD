@@ -11,23 +11,33 @@ namespace HunterCwdWebApp.Pages
         {
             _logger = logger;
         }
-
+        [BindProperty]
         public string fName { get; set; }
+        [BindProperty]
         public string lName { get; set; }
+        [BindProperty]
         public string message { get; set; }
-        public Dictionary<string, string> data = new();
+        public HuntersDBContext dbContext = new();
+        public List<Data.messageBoard> displayItem { get; set; } = new List<Data.messageBoard>();
 
 
-        public void OnGet(Dictionary<string, string> data)
+        public void OnGet()
         {
-            this.data = data;
+            displayItem = dbContext.messageBoard.ToList();
+
         }
 
-        public void OnPost(string fName, string lName, string message)
+        public void OnPostSubmit()
         {
-            this.data["fName"] = fName;
-            this.data["lName"] = lName;
-            this.data["message"] = message;
+            Data.messageBoard addItem = new Data.messageBoard();
+            addItem.FirstName = fName;
+            addItem.LastName = lName;
+            addItem.Message = message;
+            dbContext.messageBoard.Add(addItem);
+            dbContext.SaveChanges();
+
+            displayItem = dbContext.messageBoard.ToList();
+
         }
     }
 }

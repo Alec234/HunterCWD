@@ -19,6 +19,7 @@ namespace HunterCwdWebApp
 
         
         public virtual DbSet<Cwdstat> Cwdstats { get; set; } = null!;
+        public virtual DbSet<messageBoard> messageBoard { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -55,6 +56,27 @@ namespace HunterCwdWebApp
                 entity.Property(e => e.TotalTestCount).HasColumnName("totalTestCount");
 
                 entity.Property(e => e.Year).HasColumnName("year");
+            });
+
+            modelBuilder.Entity<messageBoard>(entity =>
+            {
+                entity.HasKey(e => new { e.FirstName, e.LastName })
+                    .HasName("PK__messageBoard__78221220DC84CF30");
+
+                entity.ToTable("messageBoard");
+
+                entity.Property(e => e.FirstName)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("FirstName");
+
+                entity.Property(e => e.LastName)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("LastName");
+
+                entity.Property(e => e.Message).HasColumnName("Message");
+
             });
 
             OnModelCreatingPartial(modelBuilder);

@@ -5,6 +5,7 @@
 }
 <h1>@ViewData["Title"]</h1>
 
+
 <!--Begin input form, values will be posted in table underneath-->
 
        <div class="col-md-9 mb-md-0 mb-5">
@@ -45,12 +46,9 @@
                 </div>
 
             <div class="text-center text-md-left">
-                <a class="btn btn-primary" >Submit</a>
+                <input type="submit"  asp-page-handler="Submit" value="Post"/><br /><br />
             </div>
                 </form>
-
-
-
 
 
 
@@ -59,26 +57,24 @@
 <table class="table" method="get">
   <thead>
     <tr>
-      <th scope="col">#</th>
       <th scope="col">First</th>
       <th scope="col">Last</th>
       <th scope="col">Message</th>
     </tr>
   </thead>
   <tbody>
-            @{
-                if(Model.data.ContainsKey("fName")){
-                   
-                    for(int i = 0; i<Model.data.Count(); i++)
+
+                  @{
+                    foreach(var s in @Model.displayItem)
                     {
+                        <!-- why do I need to use the at symbol here? I would think the at symbol before model is sufficient
+                        and it's wrapped in a code block.-->
                         <tr>
-                            <th scope="row">@i+1</th>
-                            <td>@Model.data["fName"]</td>
-                            <td>@Model.data["lName"]</td>
-                            <td>@Model.data["message"]</td>
-                        </tr>
-                    }   
+                          <td>@s.FirstName</td>
+                          <td>@s.LastName</td>
+                          <td>@s.Message</td>
+                        </tr>   
+                    }
                 }
-            }
   </tbody>
 </table>
