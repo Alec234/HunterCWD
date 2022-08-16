@@ -54,9 +54,10 @@
 
 
 <!--Begin table-->
-<table class="table" method="get">
+<table class="table" method="post">
   <thead>
     <tr>
+        <th scope="col">Id</th>
       <th scope="col">First</th>
       <th scope="col">Last</th>
       <th scope="col">Message</th>
@@ -64,17 +65,24 @@
   </thead>
   <tbody>
 
-                  @{
-                    foreach(var s in @Model.displayItem)
+            @{
+                int iterator = 1;
+                foreach(var s in @Model.displayItem)
                     {
-                        <!-- why do I need to use the at symbol here? I would think the at symbol before model is sufficient
-                        and it's wrapped in a code block.-->
+                        <!--Cant figure out how to reference the current first and last name from here to the model page.
+                        I think that is all that's missing. how to know what iteration displayItem is at?-->
                         <tr>
+                        <td>@iterator</td>
                           <td>@s.FirstName</td>
                           <td>@s.LastName</td>
                           <td>@s.Message</td>
-                        </tr>   
-                    }
+                          <td>
+                             <form style="background-color:red" asp-for="@iterator" asp-page-handler="Remove" method="post">
+                                <button class="btn btn-default">Remove</button></form>
+                          </td>
+                    </tr>
+                    iterator++;
+                }
                 }
   </tbody>
 </table>

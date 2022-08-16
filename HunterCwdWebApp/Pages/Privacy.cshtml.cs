@@ -3,20 +3,19 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace HunterCwdWebApp.Pages
 {
+    [BindProperties]
     public class PrivacyModel : PageModel
     {
         private readonly ILogger<PrivacyModel> _logger;
 
         public PrivacyModel(ILogger<PrivacyModel> logger)
         {
-            _logger = logger;
+            _logger = logger;   
         }
-        [BindProperty]
+        
         public string fName { get; set; }
-        [BindProperty]
         public string lName { get; set; }
-        [BindProperty]
-        public string message { get; set; }
+        public string message { get; set; }  
         public HuntersDBContext dbContext = new();
         public List<Data.messageBoard> displayItem { get; set; } = new List<Data.messageBoard>();
 
@@ -37,6 +36,21 @@ namespace HunterCwdWebApp.Pages
             dbContext.SaveChanges();
 
             displayItem = dbContext.messageBoard.ToList();
+
+        }
+
+        public void OnPostRemove(int iterator)
+        {
+            var itemToRemove = from x in dbContext.messageBoard 
+                               where x.FirstName ==  displayItem[iterator-1].FirstName
+                               && x.LastName == displayItem[iterator - 1].LastName
+                               select x;
+            //exception here
+            dbContext.Remove(itemToRemove);
+            dbContext.SaveChanges();
+
+            displayItem = dbContext.messageBoard.ToList();
+
 
         }
     }

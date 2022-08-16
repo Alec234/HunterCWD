@@ -61,7 +61,7 @@ namespace HunterCwdWebApp
             modelBuilder.Entity<messageBoard>(entity =>
             {
                 entity.HasKey(e => new { e.FirstName, e.LastName })
-                    .HasName("PK__messageBoard__78221220DC84CF30");
+                    .HasName("PK__messageBoard__78221210DC84CF30");
 
                 entity.ToTable("messageBoard");
 
