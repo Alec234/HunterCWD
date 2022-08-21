@@ -18,7 +18,12 @@ namespace HunterCwdWebApp.Pages
         public string message { get; set; }
         public void OnGet()
         {
-           //do something
+            //do something
+            this.fullName = "";
+            this.email = "";
+            this.subject = "";
+            this.message = "";
+
         }
 
         public void OnPost()
@@ -37,8 +42,8 @@ namespace HunterCwdWebApp.Pages
             return smtpClient.SendMailAsync(sender, recipient, subject, message);*/
 
             var message = new MimeMessage();
-            message.From.Add(new MailboxAddress(this.fullName, this.email));
-            message.To.Add(new MailboxAddress("HunterCWD", "hutnersCWD@gmail.com"));
+            message.From.Add(new MailboxAddress(this.fullName, "HuntersCWD@outlook.com"));
+            message.To.Add(new MailboxAddress("HunterCWD", "hutnerscwd@gmail.com"));
             message.Subject = this.subject;
 
             message.Body = new TextPart("plain")
@@ -48,10 +53,10 @@ namespace HunterCwdWebApp.Pages
 
             using (var client = new SmtpClient())
             {
-                client.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
+                client.Connect("smtp-mail.outlook.com", 587, SecureSocketOptions.StartTls);
 
                 // Note: only needed if the SMTP server requires authentication
-                client.Authenticate("hutnersCWD@gmail.com", "Fuck0ff!");
+                client.Authenticate("HuntersCWD@outlook.com", "Fuck0ff!");
 
                 client.Send(message);
                 client.Disconnect(true);
