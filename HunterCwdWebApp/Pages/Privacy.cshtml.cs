@@ -39,17 +39,11 @@ namespace HunterCwdWebApp.Pages
 
         }
 
-        public void OnPostRemove()
+        public void OnPostRemove(int iteration)
         {
             displayItem = dbContext.MessageBoards.ToList();
 
-            int iteration = Int32.Parse(Request.Form["iteration"]);
-            // var itemToRemove = from x in dbContext.MessageBoards
-            //                  where x.FirstName ==  displayItem[iteration - 1].FirstName
-            //                  && x.LastName == displayItem[iteration - 1].LastName
-            //                  select x;
-            //exception here
-            dbContext.Remove(displayItem[iteration-1]);
+            dbContext.MessageBoards.Remove(displayItem[iteration-1]);
             dbContext.SaveChanges();
 
             displayItem = dbContext.MessageBoards.ToList();
