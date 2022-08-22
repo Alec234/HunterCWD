@@ -17,41 +17,43 @@ namespace HunterCwdWebApp.Pages
         public string lName { get; set; }
         public string message { get; set; }  
         public HuntersDBContext dbContext = new();
-        public List<Data.messageBoard> displayItem { get; set; } = new List<Data.messageBoard>();
+        public List<Data.MessageBoard> displayItem { get; set; } = new List<Data.MessageBoard>();
 
 
         public void OnGet()
         {
-            displayItem = dbContext.messageBoard.ToList();
+            displayItem = dbContext.MessageBoards.ToList();
 
         }
 
         public void OnPostSubmit()
         {
-            Data.messageBoard addItem = new Data.messageBoard();
+            Data.MessageBoard addItem = new Data.MessageBoard();
             addItem.FirstName = fName;
             addItem.LastName = lName;
-            addItem.Message = message;
-            dbContext.messageBoard.Add(addItem);
+            addItem.Message = message; 
+            dbContext.MessageBoards.Add(addItem);
             dbContext.SaveChanges();
 
-            displayItem = dbContext.messageBoard.ToList();
+            displayItem = dbContext.MessageBoards.ToList();
 
         }
 
-        public void OnPostRemove(int iterator)
+        public void OnPostRemove()
         {
-            var itemToRemove = from x in dbContext.messageBoard 
-                               where x.FirstName ==  displayItem[iterator-1].FirstName
-                               && x.LastName == displayItem[iterator - 1].LastName
-                               select x;
+            displayItem = dbContext.MessageBoards.ToList();
+
+            int iteration = Int32.Parse(Request.Form["iteration"]);
+            // var itemToRemove = from x in dbContext.MessageBoards
+            //                  where x.FirstName ==  displayItem[iteration - 1].FirstName
+            //                  && x.LastName == displayItem[iteration - 1].LastName
+            //                  select x;
             //exception here
-            dbContext.Remove(itemToRemove);
+            dbContext.Remove(displayItem[iteration-1]);
             dbContext.SaveChanges();
 
-            displayItem = dbContext.messageBoard.ToList();
-
-
+            displayItem = dbContext.MessageBoards.ToList();
+           
         }
     }
 }

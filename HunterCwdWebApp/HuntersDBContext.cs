@@ -19,7 +19,7 @@ namespace HunterCwdWebApp
 
         
         public virtual DbSet<Cwdstat> Cwdstats { get; set; } = null!;
-        public virtual DbSet<messageBoard> messageBoard { get; set; } = null!;
+        public virtual DbSet<MessageBoard> MessageBoards { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -58,26 +58,27 @@ namespace HunterCwdWebApp
                 entity.Property(e => e.Year).HasColumnName("year");
             });
 
-            modelBuilder.Entity<messageBoard>(entity =>
+            modelBuilder.Entity<MessageBoard>(entity =>
             {
                 entity.HasKey(e => new { e.FirstName, e.LastName })
-                    .HasName("PK__messageBoard__78221210DC84CF30");
+                    .HasName("PK__MessageB__2457AEF1F1F93A0A");
 
-                entity.ToTable("messageBoard");
+                entity.ToTable("MessageBoard");
 
                 entity.Property(e => e.FirstName)
                     .HasMaxLength(20)
-                    .IsUnicode(false)
-                    .HasColumnName("FirstName");
+                    .IsUnicode(false);
 
                 entity.Property(e => e.LastName)
                     .HasMaxLength(20)
-                    .IsUnicode(false)
-                    .HasColumnName("LastName");
+                    .IsUnicode(false);
 
-                entity.Property(e => e.Message).HasColumnName("Message");
-
+                entity.Property(e => e.Message)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
             });
+
+
 
             OnModelCreatingPartial(modelBuilder);
         }

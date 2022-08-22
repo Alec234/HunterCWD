@@ -77,7 +77,8 @@
                           <td>@s.LastName</td>
                           <td>@s.Message</td>
                           <td>
-                             <form style="background-color:red" asp-for="@iterator" asp-page-handler="Remove" method="post">
+                             <form style="background-color:red" asp-route-id=@iterator asp-page-handler="Remove" method="post">
+                                <input type="hidden" value="@iterator" name="iteration"/> 
                                 <button class="btn btn-default">Remove</button></form>
                           </td>
                     </tr>
